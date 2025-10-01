@@ -1,13 +1,60 @@
-# React + Vite
+# React Testing Application
+This project demonstrates modern testing techniques for React applications, focusing on both unit and functional testing. Using **Vitest** and **React Testing Library**, developers can ensure their UI components work as expected and remain robust against changes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Why Testing?
+Testing is essential in React development for validating functionality, catching bugs early, and supporting team confidence through safe refactoring. Good test coverage also helps in documenting component behavior and prevents defects from reaching users.
 
-Currently, two official plugins are available:
+## Tools Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vitest**: A lightning-fast testing framework, compatible with Vite, which provides instant feedback for code changes.
+- **React Testing Library**: Promotes testing components in a way that simulates real user interactions, focusing on behavior over implementation.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# ReactTest
+Follow these steps to get the project running in VSCode:
+
+### 1. Clone the Repository
+
+```
+git clone https://github.com/ashutoshverma23/ReactTest.git
+cd ReactTest
+```
+
+### 2. Open the Project in VSCode
+
+- Open Visual Studio Code.
+- Go to “File” > “Open Folder…” and select the cloned `ReactTest` directory.
+
+### 3. Install Dependencies
+```
+npm install
+```
+### 4. Run the Tests
+
+To run the test suite with Vitest(script already created):
+```
+npm test
+```
+
+## About the Tests
+
+- Tests are written using *React Testing Library*, ensuring components are tested the way users interact with them.
+- **Vitest** provides a fast, zero-config experience well integrated with Vite projects.
+
+## Example Test Snippet
+```js
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import MyComponent from './MyComponent';
+
+test('renders button and responds to click', () => {
+render(<MyComponent />);
+const button = screen.getByRole('button');
+userEvent.click(button);
+expect(screen.getByText('Clicked!')).toBeInTheDocument();
+});
+```
+## Video Tutorial
+
+See how this project was built:  
+[YouTube Video: React Testing Guide](https://youtu.be/c7D7pR5eVXs)
