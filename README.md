@@ -54,7 +54,6 @@ userEvent.click(button);
 expect(screen.getByText('Clicked!')).toBeInTheDocument();
 });
 ```
-## Video Tutorial
+<h2>Youtube Video Tutorial <img src="https://github.com/user-attachments/assets/c2224a32-9c31-4d4c-b4b9-20c5feff6135" alt="Video Icon" width="20" height="20" style="vertical-align: middle; margin-bottom: 0px;" /></h2>
 
-See how this project was built:  
-[YouTube Video: React Testing Guide](https://youtu.be/c7D7pR5eVXs)
+[![Watch the video](https://img.youtube.com/vi/c7D7pR5eVXs/maxresdefault.jpg)](https://youtu.be/c7D7pR5eVXs)
